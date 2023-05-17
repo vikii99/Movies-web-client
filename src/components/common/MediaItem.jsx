@@ -66,12 +66,12 @@ const MediaItem = ({ media, mediaType }) => {
           <>
             {favouriteUtils.check({ listFavourites, mediaId: media.id }) && (
               <FavoriteIcon
-                color="primary"
                 sx={{
                   position: "absolute",
                   top: 2,
                   right: 2,
                   fontSize: "2rem",
+                  color: "red"
                 }}
               />
             )}
