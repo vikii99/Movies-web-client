@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { Swiper } from "swiper/react";
-import { Autoplay } from "swiper";
+// import { Autoplay } from "swiper";
 import { Navigation, Pagination } from "swiper";
 
 const AutoSwiper = ({ children }) => {

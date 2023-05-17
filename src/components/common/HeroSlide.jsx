@@ -3,7 +3,6 @@ import {
   Box,
   Button,
   Chip,
-  Divider,
   Stack,
   Typography,
   useTheme,
@@ -91,7 +90,7 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
           disableOnInteraction: false,
         }}
       >
-        {movies.map((movie, index) => (
+        {movies?.map((movie, index) => (
           <SwiperSlide key={index}>
             <Box
               sx={{
