@@ -28,6 +28,14 @@ const uiConfigs = {
         textShadow: "2px 2px 8px #000000",
       },
     },
+    textBgColor: {
+      light: {
+        backgroundColor: "rgb(188, 188, 196)",
+      },
+      dark: {
+        backgroundColor: "rgb(45, 45, 46)",
+      },
+    },
     typoLines: (lines, textAlign) => ({
       textAlign: textAlign || "justify",
       display: "-webkit-box",

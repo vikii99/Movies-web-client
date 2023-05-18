@@ -1,6 +1,7 @@
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 
 import { LoadingButton } from "@mui/lab";
 import { Box, Button, Chip, Divider, Stack, Typography } from "@mui/material";
@@ -17,9 +18,11 @@ import uiConfigs from "../configs/ui.configs";
 import tmdbConfigs from "../api/configs/tmdb.configs";
 import mediaApi from "../api/modules/media.api";
 import favouriteApi from "../api/modules/favourite.api.js";
+import { routesGen } from "../routes/routes";
 
 import { setGlobalLoading } from "../redux/features/globalLoadingSlice";
 import { setAuthModalOpen } from "../redux/features/authModalSlice";
+import { setShareModalOpen, setLink } from "../redux/features/shareModalSlice";
 import { addFavourites, removeFavourite } from "../redux/features/userSlice";
 
 import CastSlide from "../components/common/CastSlide";
@@ -244,6 +247,23 @@ const MediaDetail = () => {
                     onClick={() => videoRef.current.scrollIntoView()}
                   >
                     watch now
+                  </Button>
+                  <Button
+                    variant="contained"
+                    onClick={() => {
+                      dispatch(setShareModalOpen(true));
+                      dispatch(
+                        setLink(
+                          `https://movies-web-client.vercel.app/${routesGen.mediaDetail(
+                            tmdbConfigs.mediaType.movie,
+                            media.mediaId || media.id
+                          )}`
+                        )
+                      );
+                    }}
+                    startIcon={<ShareOutlinedIcon />}
+                  >
+                    Share
                   </Button>
                 </Stack>
                 {/* buttons */}

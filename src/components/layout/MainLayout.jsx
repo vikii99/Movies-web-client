@@ -5,6 +5,7 @@ import GlobalLoading from "../common/GlobalLoading";
 import Footer from "../common/Footer";
 import  Topbar  from "../common/Topbar";
 import AuthModal from "../common/AuthModal";
+import ShareModal from "../common/ShareModal"
 import {useDispatch, useSelector} from "react-redux"
 import { useEffect} from "react"
 import { toast } from "react-toastify";
@@ -51,6 +52,10 @@ const MainLayout = () => {
       <AuthModal/>
 
       {/* login modal */}
+
+      {/* share modal */}
+      <ShareModal/>
+      {/* share modal */}
       <Box display="flex" minHeight="100vh">
         {/*header */}
         <Topbar />
