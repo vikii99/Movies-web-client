@@ -254,8 +254,8 @@ const MediaDetail = () => {
                       dispatch(setShareModalOpen(true));
                       dispatch(
                         setLink(
-                          `https://movies-web-client.vercel.app/${routesGen.mediaDetail(
-                            tmdbConfigs.mediaType.movie,
+                          `https://movies-web-client.vercel.app${routesGen.mediaDetail(
+                            mediaType,
                             media.mediaId || media.id
                           )}`
                         )

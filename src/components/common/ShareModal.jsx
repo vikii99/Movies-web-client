@@ -15,7 +15,7 @@ const ShareModal = () => {
     const { shareModalOpen } = useSelector((state) => state.shareModal)
     const { link } = useSelector((state) => state.shareModal)
     const dispatch = useDispatch();
-    const title = "Check out this movie"
+    const title = "Check this out "
     const handleClose = () => {dispatch(setShareModalOpen(false)); dispatch(setLink(""));};
     const showMessage = () => {
         toast.success("Copied Link to clipboard")
